@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculate.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container" id="topcotainer">
+            <div class="title">Bill Total</div>
+            <div class="inputcontainer">
+                <span>$</span>
+                <input 
+                onkeyup="calculatebill()"
+                type="text" 
+                id="billtotalinput"
+                placeholder="0.0">
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">Tip</div>
+            <div class="inputcontainer">
+                <span>%</span>
+                <input 
+                onkeyup="calculatebill()"
+                type="text" 
+                id="tipinput"
+                placeholder="10">
+            </div>
+        </div>
+        <div class="container" id="bottom">
+            <div class="splitcontainer">
+                <div class="title">People</div>
+                <div class="controls">
+                    <span class="buttoncontainer">
+                        <button class="splitbutton" onclick="increasepeople()">
+                        <span>+</span>
+                    </button>
+                    </span>
+                    <span class="splitamount" id="numberofpeople">1</span>
+                    <span class="buttoncontainer">
+                        <button class="splitbutton" onclick="decreasepeople()">
+                            <span class="buttontext">-</span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="totalcontainer">
+                <div class="title">Total Per Person</div>
+                <div class="total" id="perpersontotal">$0.00</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const billinput = document.getElementById('billtotalinput')
+    const tipinput = document.getElementById('tipinput')
+    const numberofpeoplediv = document.getElementById('numberofpeople')
+    const perpersontotaldiv = document.getElementById('perpersontotal')
+
+    let numberofpeople =  Number(numberofpeoplediv.innerText)
+
+    const calculatebill=()=>{
+        const bill= Number(billinput.value)
+
+        const tippercentage= Number(tipinput.value/100)
+        
+        const tipamount = bill * tippercentage
+      
+        const total = tipamount+bill
+        
+        const perpersontotal=total/numberofpeople
+        
+        perpersontotaldiv.innerText = `$${perpersontotal.toFixed(2)}`
+    }
+    const increasepeople=()=>{
+        numberofpeople += 1
+        numberofpeoplediv.innerText = numberofpeople
+        calculatebill()
+    }
+    const decreasepeople=()=>{
+        if(numberofpeople<=1){
+            alert('Hey! You cannot have less than 1person!')
+            return
+        }
+        numberofpeople-=1
+        numberofpeoplediv.innerText = numberofpeople
+        calculatebill()
+    }
+</script>
+</html>

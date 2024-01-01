@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const fruits =['banana','apple','pear','papaya','banana','apple','pear','papaya'];
+    // for(let i=0;i<fruits.length;i++){
+    //     console.log(i, fruits[i])
+    // }
+
+    // for(const fruit of fruits){
+    //     console.log(fruit)
+    // }
+
+    // sum up all numbers in array
+    // const numbers=[1,2,3,4,5,6,7,8,9];
+    // for(let i=0;i<numbers.length;i++){
+    //     console.log(numbers[i])
+    // }
+    // for(const number of numbers){
+    //     console.log(number)
+    // }
+
+    // let result = []
+    // for(const number of numbers){
+    //     console.log(number*2)
+    //     result.push(number*2)
+    // }
+    // console.log(result)
+ 
+    // const double = (number)=>{
+    //     let result =[]
+    //     for(const number of numbers){
+    //         result.push(number*2)
+    //     }
+    //     return result
+    // }
+    // console.log(double([1,2,3,4,5,6]))
+
+    // const howmanyletter=(phrase)=>{
+    //     // phrase.length
+    //     let result = 0;
+    //     for(const index in phrase){
+    //         console.log(Number(index)+1)
+    //         result = Number(index)+1
+    //     }
+    //     return {result}
+    // } 
+    // const phrase = prompt("Write your phrase")
+    // console.log(howmanyletter(phrase)) 
+
+    // const sumarray=(numbers)=>{
+    //     let result =0;
+    //     for(const number of numbers){
+    //         console.log(number)
+    //         result+=number
+    //     }
+    //     return {result}
+    // }
+    // const nums=[1,2,3,4,7]
+    // console.log(sumarray(nums))
+
+    // const max=(numbers)=>{
+    //     let result=numbers[0]
+    //     for(const number of numbers){
+    //         if(number > result){
+    //             result=number
+    //         }
+    //     }
+    //     return {result}
+    // }
+    // console.log(max([1,2,4,3,6,4,10,5]))
+    
+    // const letterfrequency = (phrase)=>{
+    //     console.log(phrase)
+    //     for(const letter of phrase){   
+    //     }
+    // }
+    // console.log(letterfrequency('haha'))
+
+    let frequency={}
+    const letterfrequency = (phrase)=>{
+        console.log(phrase)
+        for(const letter of phrase){
+            if(letter in frequency){
+                frequency[letter]++
+            } else {
+                frequency[letter] = 1
+            }
+        }
+        return frequency
+    }
+    console.log(letterfrequency('Today is Monday'))     // {T: 1, o: 2, d: 2, a: 2, y: 2, …}
+
+    // const wordfrequency=(phrase)=>{
+    //     let frequency ={}
+    //     words= phrase.split(' ')
+    //     for(const word of words){
+    //         console.log(word)
+    //         if(word in frequency){
+    //             frequency[word]+=1
+    //         } else {
+    //             frequency[word]=1
+    //         }
+    //     }
+    //     console.log(words)
+    //     return frequency
+    // }
+    // console.log(wordfrequency('what is what'))      // what\n is\n what\n ['what', 'is', 'what']
+
+    const wordfrequency = (phrase)=>{
+        const words = phrase.split(' ');
+        return letterfrequency(words)
+    }
+    input = prompt('Write: ')
+    console.log(wordfrequency(input))
+    
+
+
+
+</script>
+</html>

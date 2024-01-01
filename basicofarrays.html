@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // arrays
+    // const groceries =['banana','apple','pear'];
+    // console.log(groceries)
+    // console.log(groceries[2])
+    // groceries.push('papaya')
+    // console.log(groceries)
+    // groceries.push('berry')
+    // console.log(groceries.slice(0,2)) // start from 0 inclusive and up to 2[0,1]
+    // console.log(groceries.slice(2,6)) // show from index 2 to 5
+    
+    //array methods(slice, push , indexof, length)
+
+    // console.log(groceries.indexOf('apple'))
+    // console.log(groceries.length)
+    
+    // .map() array methods
+
+    // [1,2,3,4].map(number => console.log(number))
+    // let result = [1,2,3,4].map(number => number*2)
+    // console.log(result)
+    // const doublemap =(numbers)=>{
+    //     return numbers.map(number => number*2)
+    // }
+    // console.log(doublemap([2,1,4,5]))
+
+    // .filter([1,2,3,4,5,6]) 
+
+    // const filter=(numbers, greaterthan)=>{
+    //     let result = []
+    //     for(const number of numbers){
+    //         if(number>greaterthan){
+    //             result.push(number)
+    //         }
+    //     }
+    //     return result
+    // }
+    // num=[1,2,3,4,5,6]
+    // console.log(filter(num,2))
+
+    // const nums= [1,2,3,4,5,6]
+    // console.log(nums.filter(num=>num>4 || num<3))
+   
+    //userisauthenticated && userispayingmember
+
+    // const actors=[
+    //     {name: 'Janny',networth:10000},
+    //     {name: 'Kanny',networth:20000},
+    //     {name: 'Lanny',networth:30000}
+    // ]
+    // console.log(actors.reduce((prev,curr)=>prev + curr.networth,0))
+  
+    // console.log(actors.filter(actor => actor.networth>10000))
+    // let result = actors.filter(actor => actor.networth>10000)
+    // console.log(result)
+    // playground.innerHTML = `<h1>${JSON.stringify(result)}</h1>`;
+    // playground.innerHTML = `<h1>${result[0].name}</h1>`;
+
+    // let names = actors.map(actor => actor.name).join(', ')
+    // console.log(names)
+    // basicofarrays.text = `<h1>hello world</h1>`
+
+    // .reduce()
+    //sum all of the networths
+    // reduce takes in a fucntion as an arguemnt
+    // reduce loops anf gives you back the accumlator
+    // const nums=[1,2,3]
+
+    // const result= nums.reduce(function(prev,curr){
+    //     return prev + curr
+    // })
+    // console.log(result)
+
+    // const result= nums.reduce((prev,curr)=> prev + curr ,10)
+    // console.log(result)
+
+    // function sum(a,b){
+    //     return a+b
+    // }
+    // const result= nums.reduce(sum)
+    // console.log(result)
+
+    // random fruits
+    // const randomfruit =(fruits)=>{
+    //     const randomnumber= Math.floor(Math.random()*fruits.length)
+    //     console.log(randomnumber)
+    //     return fruits[randomnumber]
+    // }
+    // fruits=['banana','apple','papaya','watermelon']
+    // console.log(randomfruit(fruits))
+
+    // const weatherscorer=(weather, weather2)=>{
+    //     let score
+    //     if(weather == 'rainy' && weather2 =='overcast'){
+    //         score = 2;
+    //     } else if(weather =='rainy'){
+    //         score = 1;
+    //     } else if(weather =='sunny'){
+    //         score = -1;
+    //     } else {
+    //         score = 0;
+    //     }
+    //     return score
+    // }
+    // weather = prompt('Input the weather')
+    // console.log(weatherscorer('rainy','sunny'))
+
+
+
+</script>
+</html>  

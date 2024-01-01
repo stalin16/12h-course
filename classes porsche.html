@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Car{
+        constructor(name,color,topspeed){
+            this.name = name
+            this.color=color
+            this.topspeed= topspeed
+        }
+        drive(){
+            this.topspeed +=10
+        }
+    }
+
+    const porsche = new Car('Porsche 911','Yellow','250')
+    console.log(porsche)
+    porsche.drive()
+    console.log(porsche.name)
+
+
+
+
+
+
+</script>
+</html>
